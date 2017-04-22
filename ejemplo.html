@@ -3,6 +3,18 @@
 		<title>
 			Mangos
 		</title>
+		<style type="text/css">
+			body {
+				background-color: lightgreen;
+			}
+			th{
+				background-color: lightblue;
+				color: white;
+			}
+			.nombre{
+				background-color: red; 
+			}
+		</style>
 		<script type="text/javascript">
 			function agregar()
 			{
@@ -14,6 +26,7 @@
 				var tdNombre = document.createElement("td");
 				var tdApellido = document.createElement("td");
 				tdId.innerHTML = tbody.children.length + 1;
+				tdId.style.backgroundColor = "blue";
 				tdNombre.innerHTML = nom.value;
 				tdApellido.innerHTML = ape.value;
 				row.appendChild(tdId);
@@ -29,13 +42,13 @@
 			<span>
 				Nombre:
 			</span>
-			<input type="text" id="nombre"/>
+			<input type="text" id="nombre" placeholder="Nombre"/>
 		</div>
 		<div>
 			<span>
 				Apellido:
 			</span>
-			<input type="text" id = "apellido"/>
+			<input type="text" id = "apellido" placeholder="Apellido" />
 		</div>
 		<div>
 			<button onclick="agregar()">
@@ -49,7 +62,7 @@
 				<th>
 					ID
 				</th>
-				<th>
+				<th class="nombre">
 					Nombre
 				</th>
 				<th>
